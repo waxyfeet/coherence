@@ -1,0 +1,141 @@
+/* Adapted from Odysseus (AGPL-3.0), revision 8877273e195a90d51bc6a37f3a1b60dc3414c431.
+   Source mapping: docs/ODYSSEUS_THEME_PORT.md. Full notice: public/notices/Odysseus-AGPL-3.0.txt. */
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/odysseus/FiraCode-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/odysseus/FiraCode-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fira Code";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/odysseus/FiraCode-SemiBold.woff2") format("woff2");
+}
+
+:root[data-odysseus-theme] {
+  font-family: "Fira Code", monospace;
+  color-scheme: dark;
+}
+:root[data-odysseus-theme="cute"] {
+  color-scheme: light;
+}
+:root[data-odysseus-theme] #root {
+  position: relative;
+  z-index: 1;
+}
+:root[data-odysseus-theme] .real-app .app-main {
+  background: transparent;
+}
+:root[data-odysseus-theme] .real-app .project-avatar {
+  background: var(--panel);
+  color: var(--fg);
+  border-color: var(--border);
+  font-family: "Fira Code", monospace;
+}
+:root[data-odysseus-theme] .evidence-graph-node.feature .small-dot {
+  background: var(--fg);
+}
+/* Keep source foreground for selected text; accent remains on the marker/border. */
+:root[data-odysseus-theme] .settings-nav-item.active,
+:root[data-odysseus-theme] .nav-link.active,
+:root[data-odysseus-theme] .badge.accent {
+  color: var(--fg);
+}
+#odysseus-background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Original static synapse grid and renderer styles, 01-agent-chat.css:25–72.
+   Body selectors become the isolated decoration host; no visual changes. */
+#odysseus-background canvas,
+#ascii-fireflies-background {
+  opacity: var(--bg-effect-intensity, 1);
+}
+#odysseus-background.bg-pattern-synapse {
+  background-image:
+    linear-gradient(
+      color-mix(
+          in srgb,
+          var(--bg-effect-color, var(--fg))
+            calc(3.5% * var(--bg-effect-intensity, 1)),
+          transparent
+        )
+        1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(
+          in srgb,
+          var(--bg-effect-color, var(--fg))
+            calc(3.5% * var(--bg-effect-intensity, 1)),
+          transparent
+        )
+        1px,
+      transparent 1px
+    );
+  background-size: 24px 24px;
+  background-attachment: fixed;
+}
+#ascii-fireflies-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 14px 16px;
+  overflow: hidden;
+  pointer-events: none;
+  white-space: pre;
+  color: var(--bg-effect-color, var(--fg));
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+/* Existing ScreenScribe structures retain their layout; new swatches use exact source colours. */
+.settings-live .theme-options {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr));
+}
+.theme-option[style] .theme-mini {
+  background: var(--theme-bg);
+  border: 1px solid var(--theme-border);
+}
+.theme-option[style] .theme-mini > div:first-child {
+  background: var(--theme-panel);
+  border-color: var(--theme-border);
+}
+.theme-option[style] .theme-mini i {
+  background: var(--theme-fg);
+  opacity: 0.55;
+}
+.theme-option[style] .theme-mini i:first-child {
+  background: var(--theme-accent);
+  opacity: 1;
+}
+:root[data-odysseus-theme] .markdown-document pre,
+:root[data-odysseus-theme] .markdown-document code {
+  background: var(--hl-bg);
+  color: var(--hl-fg);
+}
+:root[data-odysseus-theme] .real-app .react-flow {
+  --xy-background-color: var(--bg);
+  --xy-controls-button-background-color: var(--panel);
+  --xy-controls-button-color: var(--fg);
+  --xy-minimap-background-color: var(--panel);
+}

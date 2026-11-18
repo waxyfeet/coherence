@@ -1,0 +1,2 @@
+# Golden example plans are written by the test that checks them (JSON.stringify), not by Prettier.
+server/delivery/examples/

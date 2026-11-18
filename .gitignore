@@ -1,0 +1,50 @@
+node_modules/
+dist/
+.cache/
+.env*
+!.env.example
+*.local
+.screenscribe-v2/
+.screenscribe-v2-test/
+.local-auth/
+docs/CodexAnalysis.zip
+# Evidence written by the scripts/verify-*.mjs browser checks.
+/artifacts/
+
+# Local credentials, browser diagnostics and machine-specific configuration.
+# Ignore rules cannot remove files already present in Git history.
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+credentials.json
+secrets.json
+*.credentials.json
+*.har
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Additional disposable data/export roots and generated test/build output.
+.screenscribe-v2-*/
+/backups/
+/exports/
+/outputs/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Packaging output: staged app, build metadata and the verified Node.js download cache.
+/build/
+
+# Launcher and platform helper build output (packaging/build-launcher.mjs)
+/packaging/launcher/bin/
+/packaging/launcher/obj/
+/packaging/launcher/tests/bin/
+/packaging/launcher/tests/obj/
+/packaging/helper/bin/
+/packaging/helper/obj/

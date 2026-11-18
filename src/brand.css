@@ -1,0 +1,23 @@
+.coherence-mark {
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+.coherence-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.coherence-mark .coherence-mark-light {
+  display: none;
+}
+:root[data-theme="light"] .coherence-mark-dark,
+:root[data-theme="cute"] .coherence-mark-dark {
+  display: none;
+}
+:root[data-theme="light"] .coherence-mark-light,
+:root[data-theme="cute"] .coherence-mark-light {
+  display: block;
+}

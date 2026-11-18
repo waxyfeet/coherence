@@ -1,0 +1,17 @@
+{
+  "upstream": "https://github.com/odysseus-dev/odysseus",
+  "revision": "8877273e195a90d51bc6a37f3a1b60dc3414c431",
+  "ownerClearance": "Explicitly confirmed 22 October 2026; licensing investigation remains owner-owned.",
+  "sha256": {
+    "static/js/theme.js": "c268f047e6facab203a67199e53d328f3ef57a4e332a7634ef7ff4e93e448396",
+    "static/js/color/hex.js": "aecac275272b5c0df87a46e93e2ac839ecea93b4287382a41309ac1f60073bd5",
+    "static/css/00-tokens.css": "97e32bd842e6c683a3c1ae2d93c08a6b40a6c8f3ce358d428bdbef4cf40aaaf9",
+    "static/css/01-agent-chat.css": "b533d904ed613bd704f275a04ff785ebc086be71ac038b36bf063f8e6e4b649e",
+    "static/css/17-research.css": "47f1d26da485df41851411f91c81974f0805f6834930a4aaece81d87ab71e91d",
+    "LICENSE": "d8a6cc31abc16b6748c7a21f21611f5a1ec33f67d22ca23d7da1c19b95496bee",
+    "licenses/FiraCode-OFL-1.1.txt": "1d41e10031ab125302780a05ec4c91d218e47db0c7e37cf315cce5e608cdc25c",
+    "static/fonts/FiraCode-Light.woff2": "e3aa3db06cfb19dfc0b0f1f38355add3e8d1ef45d3af39ce95d9ca7d96114e6c",
+    "static/fonts/FiraCode-Regular.woff2": "a6ce59520b90e15d7062ffef214f94c8add5a4085c0bbb1683602ef227a4d1fe",
+    "static/fonts/FiraCode-SemiBold.woff2": "d16779aa6dfc7c4effe686ece5bdf4b1356a7352167e37fa256f596a9d428f11"
+  }
+}

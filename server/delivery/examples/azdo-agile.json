@@ -1,0 +1,763 @@
+{
+  "plan": {
+    "schemaVersion": 1,
+    "id": "dp_example_azdo-agile",
+    "projectId": "acme",
+    "system": "azdo",
+    "revision": 1,
+    "createdAt": "2026-11-02T10:00:00.000Z",
+    "updatedAt": "2026-11-02T10:00:00.000Z",
+    "destination": {
+      "identity": {
+        "system": "azdo",
+        "base": "dev.azure.com/acme",
+        "container": "portal"
+      },
+      "label": "Azure DevOps · portal",
+      "schemaFingerprint": "b5953ea98858548aabf9f2beb0051a7a",
+      "discoveredAt": "2026-11-02T10:00:00.000Z",
+      "textFormat": "html",
+      "capabilities": [
+        {
+          "id": "acceptance-criteria-field",
+          "state": "supported",
+          "note": "\"User Story\" has an Acceptance Criteria field."
+        },
+        {
+          "id": "validate-only",
+          "state": "supported",
+          "note": "Azure DevOps can validate a work item without saving it (validateOnly). Not used until live publishing is authorised."
+        },
+        {
+          "id": "conditional-rules",
+          "state": "unknown",
+          "note": "Process rules that require fields only in some states are not exposed by metadata."
+        },
+        {
+          "id": "attachments",
+          "state": "supported",
+          "note": "Work items accept attachments; Coherence uploads none without your approval."
+        }
+      ]
+    },
+    "destinationTypes": [
+      {
+        "id": "Feature",
+        "name": "Feature",
+        "level": "portfolio",
+        "isDefault": true,
+        "fields": [
+          {
+            "id": "System.Title",
+            "name": "Title",
+            "kind": "single-line",
+            "role": "title",
+            "required": true,
+            "hasDefault": false,
+            "readOnly": false,
+            "custom": false,
+            "maxLength": 255,
+            "sourceType": "string"
+          },
+          {
+            "id": "System.Description",
+            "name": "Description",
+            "kind": "rich-text",
+            "role": "description",
+            "required": false,
+            "hasDefault": false,
+            "readOnly": false,
+            "custom": false,
+            "sourceType": "html"
+          },
+          {
+            "id": "System.Tags",
+            "name": "Tags",
+            "kind": "labels",
+            "role": "labels",
+            "required": false,
+            "hasDefault": false,
+            "readOnly": false,
+            "custom": false,
+            "sourceType": "plainText"
+          },
+          {
+            "id": "System.AreaPath",
+            "name": "Area Path",
+            "kind": "tree-path",
+            "role": "area",
+            "required": false,
+            "hasDefault": true,
+            "readOnly": false,
+            "custom": false,
+            "sourceType": "treePath"
+          },
+          {
+            "id": "System.State",
+            "name": "State",
+            "kind": "single-line",
+            "role": "team",
+            "required": true,
+            "hasDefault": true,
+            "readOnly": false,
+            "custom": false,
+            "maxLength": 255,
+            "sourceType": "string"
+          }
+        ]
+      },
+      {
+        "id": "User Story",
+        "name": "User Story",
+        "level": "requirement",
+        "isDefault": true,
+        "fields": [
+          {
+            "id": "System.Id",
+            "name": "ID",
+            "kind": "number",
+            "role": "structural",
+            "required": false,
+            "hasDefault": false,
+            "readOnly": true,
+            "custom": false,
+            "sourceType": "integer"
+          },
+          {
+            "id": "System.Title",
+            "name": "Title",
+            "kind": "single-line",
+            "role": "title",
+            "required": true,
+            "hasDefault": false,
+            "readOnly": false,
+            "custom": false,
+            "maxLength": 255,
+            "sourceType": "string"
+          },
+          {
+            "id": "System.Description",
+            "name": "Description",
+            "kind": "rich-text",
+            "role": "description",
+            "required": false,
+            "hasDefault": false,
+            "readOnly": false,
+            "custom": false,
+            "sourceType": "html"
+          },
+          {
+            "id": "Microsoft.VSTS.Common.AcceptanceCriteria",
+            "name": "Acceptance Criteria",
+            "kind": "rich-text",
+            "role": "acceptance-criteria",
+            "required": false,
+            "hasDefault": false,
+            "readOnly": false,
+            "custom": false,
+            "sourceType": "html"
+          },
+          {
+            "id": "System.Tags",
+            "name": "Tags",
+            "kind": "labels",
+            "role": "labels",
+            "required": false,
+            "hasDefault": false,
+            "readOnly": false,
+            "custom": false,
+            "sourceType": "plainText"
+          },
+          {
+            "id": "System.AreaPath",
+            "name": "Area Path",
+            "kind": "tree-path",
+            "role": "area",
+            "required": false,
+            "hasDefault": true,
+            "readOnly": false,
+            "custom": false,
+            "sourceType": "treePath"
+          },
+          {
+            "id": "System.IterationPath",
+            "name": "Iteration Path",
+            "kind": "tree-path",
+            "role": "iteration",
+            "required": false,
+            "hasDefault": true,
+            "readOnly": false,
+            "custom": false,
+            "sourceType": "treePath"
+          },
+          {
+            "id": "System.State",
+            "name": "State",
+            "kind": "single-line",
+            "role": "team",
+            "required": true,
+            "hasDefault": true,
+            "readOnly": false,
+            "custom": false,
+            "maxLength": 255,
+            "sourceType": "string"
+          },
+          {
+            "id": "System.AssignedTo",
+            "name": "Assigned To",
+            "kind": "user",
+            "role": "team",
+            "required": false,
+            "hasDefault": false,
+            "readOnly": false,
+            "custom": false,
+            "sourceType": "string"
+          },
+          {
+            "id": "Microsoft.VSTS.Scheduling.StoryPoints",
+            "name": "Story Points",
+            "kind": "number",
+            "role": "estimate",
+            "required": false,
+            "hasDefault": false,
+            "readOnly": false,
+            "custom": false,
+            "sourceType": "double"
+          },
+          {
+            "id": "Microsoft.VSTS.Common.Priority",
+            "name": "Priority",
+            "kind": "option",
+            "role": "priority",
+            "required": false,
+            "hasDefault": true,
+            "readOnly": false,
+            "custom": false,
+            "allowedValues": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "sourceType": "integer"
+          },
+          {
+            "id": "Microsoft.VSTS.Common.ValueArea",
+            "name": "Value Area",
+            "kind": "option",
+            "role": "team",
+            "required": true,
+            "hasDefault": true,
+            "readOnly": false,
+            "custom": false,
+            "allowedValues": [
+              "Architectural",
+              "Business"
+            ],
+            "sourceType": "string"
+          }
+        ]
+      }
+    ],
+    "options": {
+      "includeUnapproved": false,
+      "groupByFeature": true,
+      "linkDependencies": true,
+      "useAi": false
+    },
+    "sources": [
+      {
+        "useCaseId": "UC-001",
+        "title": "Open the app",
+        "revision": 2,
+        "status": "approved",
+        "fingerprint": "b54dbb3ea5b4d1eaec13aa836bd23203",
+        "origin": "file",
+        "included": true
+      },
+      {
+        "useCaseId": "UC-003",
+        "title": "Sign in with email and password",
+        "revision": 2,
+        "status": "approved",
+        "fingerprint": "5d1193d3609affbed520163cbe97bc56",
+        "origin": "file",
+        "included": true
+      }
+    ],
+    "items": [
+      {
+        "id": "group:FEAT-01",
+        "durableKey": "coh-01a7cf1778c2",
+        "role": "group",
+        "typeId": "Feature",
+        "typeName": "Feature",
+        "title": "Authentication",
+        "sources": {
+          "useCaseIds": [
+            "UC-001",
+            "UC-003"
+          ],
+          "featureId": "FEAT-01"
+        },
+        "fields": [
+          {
+            "fieldId": "System.Title",
+            "fieldName": "Title",
+            "kind": "single-line",
+            "value": "Authentication",
+            "provenance": {
+              "kind": "requirement",
+              "evidence": [
+                "feature"
+              ],
+              "label": "Feature group name"
+            },
+            "ownership": "coherence"
+          },
+          {
+            "fieldId": "System.Description",
+            "fieldName": "Description",
+            "kind": "rich-text",
+            "value": "Signing in and out.\n\n_Feature group FEAT-01 from Coherence · coh-01a7cf1778c2_",
+            "provenance": {
+              "kind": "requirement",
+              "evidence": [
+                "feature"
+              ],
+              "label": "Feature group description"
+            },
+            "ownership": "coherence"
+          },
+          {
+            "fieldId": "System.Tags",
+            "fieldName": "Tags",
+            "kind": "labels",
+            "value": [
+              "coherence-test",
+              "Coherence",
+              "FEAT-01"
+            ],
+            "provenance": {
+              "kind": "rule",
+              "by": "settings",
+              "label": "Your Azure DevOps settings plus Coherence's identity labels"
+            },
+            "ownership": "coherence"
+          },
+          {
+            "fieldId": "System.AreaPath",
+            "fieldName": "Area Path",
+            "kind": "tree-path",
+            "value": "Portal\\Web",
+            "provenance": {
+              "kind": "rule",
+              "by": "settings",
+              "label": "Your Azure DevOps settings"
+            },
+            "ownership": "team"
+          }
+        ],
+        "operation": "create",
+        "rationale": "Feature groups become \"Feature\" from your azure devops settings. A new one is created when you publish.",
+        "typeProvenance": {
+          "kind": "rule",
+          "by": "settings",
+          "label": "Your Azure DevOps settings"
+        }
+      },
+      {
+        "id": "uc:UC-001",
+        "durableKey": "coh-0d98e76fae02",
+        "role": "requirement",
+        "typeId": "User Story",
+        "typeName": "User Story",
+        "title": "[UC-001] Open the app",
+        "sources": {
+          "useCaseIds": [
+            "UC-001"
+          ],
+          "featureId": "FEAT-01",
+          "ruleIds": [],
+          "scenarioIds": [
+            "SC-01"
+          ]
+        },
+        "parentItemId": "group:FEAT-01",
+        "fields": [
+          {
+            "fieldId": "System.Title",
+            "fieldName": "Title",
+            "kind": "single-line",
+            "value": "[UC-001] Open the app",
+            "provenance": {
+              "kind": "requirement",
+              "evidence": [
+                "title"
+              ],
+              "label": "Use case id and title"
+            },
+            "ownership": "coherence"
+          },
+          {
+            "fieldId": "System.Description",
+            "fieldName": "Description",
+            "kind": "rich-text",
+            "value": "**As a** registered user  \n**I want to** sign in with my email address and password  \n**So that** I can access my account securely\n\n**Scope:** Sign-in form on the Login screen: credentials entry, remember-me and submission.\n\n**Feature:** Authentication · **Persona:** Registered user · **Screens:** Login · **Size:** M\n\n## Preconditions\n\n- The Login screen is displayed\n\n## Postconditions\n\n- The user is signed in\n- The Dashboard screen is displayed\n\n## Business rules\n\n- None\n\n## Assumptions\n\n- Error message wording is inferred; confirm with UX.\n\n## Open questions\n\n- Is single sign-on required?\n\n---\n\n_Generated by Coherence — UC-001 rev 2 · coh-0d98e76fae02_",
+            "provenance": {
+              "kind": "requirement",
+              "evidence": [
+                "specification"
+              ],
+              "label": "Full specification (story, scope, rules, conditions, questions)"
+            },
+            "ownership": "coherence"
+          },
+          {
+            "fieldId": "Microsoft.VSTS.Common.AcceptanceCriteria",
+            "fieldName": "Acceptance Criteria",
+            "kind": "rich-text",
+            "value": "#### SC-01 · App opens (happy path)\n\n```gherkin\nGIVEN the app is installed\nWHEN the user opens the app\nTHEN the Login screen is displayed\n```",
+            "provenance": {
+              "kind": "requirement",
+              "evidence": [
+                "scenarios"
+              ],
+              "label": "BDD scenarios"
+            },
+            "ownership": "coherence"
+          },
+          {
+            "fieldId": "System.Tags",
+            "fieldName": "Tags",
+            "kind": "labels",
+            "value": [
+              "coherence-test",
+              "Coherence",
+              "UC-001"
+            ],
+            "provenance": {
+              "kind": "rule",
+              "by": "settings",
+              "label": "Your Azure DevOps settings plus Coherence's identity labels"
+            },
+            "ownership": "coherence"
+          },
+          {
+            "fieldId": "System.AreaPath",
+            "fieldName": "Area Path",
+            "kind": "tree-path",
+            "value": "Portal\\Web",
+            "provenance": {
+              "kind": "rule",
+              "by": "settings",
+              "label": "Your Azure DevOps settings"
+            },
+            "ownership": "team"
+          }
+        ],
+        "operation": "create",
+        "rationale": "Use cases become \"User Story\", the type in your azure devops settings.",
+        "typeProvenance": {
+          "kind": "rule",
+          "by": "settings",
+          "label": "Your Azure DevOps settings"
+        }
+      },
+      {
+        "id": "uc:UC-003",
+        "durableKey": "coh-9cf20c6123b6",
+        "role": "requirement",
+        "typeId": "User Story",
+        "typeName": "User Story",
+        "title": "[UC-003] Sign in with email and password",
+        "sources": {
+          "useCaseIds": [
+            "UC-003"
+          ],
+          "featureId": "FEAT-01",
+          "ruleIds": [
+            "BR-01",
+            "BR-05"
+          ],
+          "scenarioIds": [
+            "SC-01"
+          ]
+        },
+        "parentItemId": "group:FEAT-01",
+        "fields": [
+          {
+            "fieldId": "System.Title",
+            "fieldName": "Title",
+            "kind": "single-line",
+            "value": "[UC-003] Sign in with email and password",
+            "provenance": {
+              "kind": "requirement",
+              "evidence": [
+                "title"
+              ],
+              "label": "Use case id and title"
+            },
+            "ownership": "coherence"
+          },
+          {
+            "fieldId": "System.Description",
+            "fieldName": "Description",
+            "kind": "rich-text",
+            "value": "**As a** registered user  \n**I want to** sign in with my email address and password  \n**So that** I can access my account securely\n\n**Scope:** Sign-in form on the Login screen: credentials entry, remember-me and submission.\n\n**Feature:** Authentication · **Persona:** Registered user · **Screens:** Login · **Size:** M · **Depends on:** UC-001\n\n## Preconditions\n\n- The Login screen is displayed\n\n## Postconditions\n\n- The user is signed in\n- The Dashboard screen is displayed\n\n## Business rules\n\n### BR-01 · Email address — Email input\n\n`login.email`\n\nSingle-line email input labelled \"Email address\" with placeholder \"you@company.com\".\n\n- Mandatory; the form cannot be submitted while it is empty.\n- Must be a valid email address, max 254 characters.\n\n### BR-05 · Screen-level rules — General\n\nRules that apply to the whole sign-in form.\n\n- After 5 consecutive failed attempts the account is locked for 15 minutes.\n\n## Assumptions\n\n- Error message wording is inferred; confirm with UX.\n\n## Open questions\n\n- Is single sign-on required?\n\n---\n\n_Generated by Coherence — UC-003 rev 2 · coh-9cf20c6123b6_",
+            "provenance": {
+              "kind": "requirement",
+              "evidence": [
+                "specification"
+              ],
+              "label": "Full specification (story, scope, rules, conditions, questions)"
+            },
+            "ownership": "coherence"
+          },
+          {
+            "fieldId": "Microsoft.VSTS.Common.AcceptanceCriteria",
+            "fieldName": "Acceptance Criteria",
+            "kind": "rich-text",
+            "value": "#### SC-01 · Successful sign-in (happy path)\n\n```gherkin\nGIVEN the Login screen is displayed\nAND the user has an active account\nWHEN the user enters a registered email address in \"Email address\"\nAND the user selects \"Sign in\"\nTHEN the user is signed in\nTHEN the Dashboard screen is displayed\n```",
+            "provenance": {
+              "kind": "requirement",
+              "evidence": [
+                "scenarios"
+              ],
+              "label": "BDD scenarios"
+            },
+            "ownership": "coherence"
+          },
+          {
+            "fieldId": "System.Tags",
+            "fieldName": "Tags",
+            "kind": "labels",
+            "value": [
+              "coherence-test",
+              "Coherence",
+              "UC-003"
+            ],
+            "provenance": {
+              "kind": "rule",
+              "by": "settings",
+              "label": "Your Azure DevOps settings plus Coherence's identity labels"
+            },
+            "ownership": "coherence"
+          },
+          {
+            "fieldId": "System.AreaPath",
+            "fieldName": "Area Path",
+            "kind": "tree-path",
+            "value": "Portal\\Web",
+            "provenance": {
+              "kind": "rule",
+              "by": "settings",
+              "label": "Your Azure DevOps settings"
+            },
+            "ownership": "team"
+          }
+        ],
+        "operation": "create",
+        "rationale": "Use cases become \"User Story\", the type in your azure devops settings.",
+        "typeProvenance": {
+          "kind": "rule",
+          "by": "settings",
+          "label": "Your Azure DevOps settings"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "id": "parent:uc:UC-001",
+        "kind": "parent",
+        "fromItemId": "uc:UC-001",
+        "toItemId": "group:FEAT-01",
+        "via": "relation",
+        "status": "planned",
+        "provenance": {
+          "kind": "requirement",
+          "evidence": [
+            "feature"
+          ],
+          "label": "Use case's feature group"
+        }
+      },
+      {
+        "id": "parent:uc:UC-003",
+        "kind": "parent",
+        "fromItemId": "uc:UC-003",
+        "toItemId": "group:FEAT-01",
+        "via": "relation",
+        "status": "planned",
+        "provenance": {
+          "kind": "requirement",
+          "evidence": [
+            "feature"
+          ],
+          "label": "Use case's feature group"
+        }
+      },
+      {
+        "id": "dependency:uc:UC-003:UC-001",
+        "kind": "dependency",
+        "fromItemId": "uc:UC-003",
+        "via": "link",
+        "linkTypeId": "System.LinkTypes.Dependency-Reverse",
+        "status": "planned",
+        "provenance": {
+          "kind": "requirement",
+          "label": "UC-003 depends on UC-001 (use case chain)"
+        },
+        "toItemId": "uc:UC-001"
+      }
+    ],
+    "attachments": [
+      {
+        "id": "uc:UC-001:scr_login",
+        "itemId": "uc:UC-001",
+        "screenId": "scr_login",
+        "screenName": "Login",
+        "version": 1,
+        "bytes": 10,
+        "mimeType": "image/png",
+        "include": false,
+        "supported": "supported",
+        "note": "Not shared unless you include it. Only the current version is ever offered."
+      },
+      {
+        "id": "uc:UC-003:scr_login",
+        "itemId": "uc:UC-003",
+        "screenId": "scr_login",
+        "screenName": "Login",
+        "version": 1,
+        "bytes": 10,
+        "mimeType": "image/png",
+        "include": false,
+        "supported": "supported",
+        "note": "Not shared unless you include it. Only the current version is ever offered."
+      }
+    ],
+    "decisions": [
+      {
+        "id": "field:User Story:Microsoft.VSTS.Scheduling.StoryPoints",
+        "kind": "field-mapping",
+        "question": "Should \"Story Points\" be filled from Coherence's size? Size is an AI-assigned estimate, not your team's.",
+        "typeId": "User Story",
+        "fieldId": "Microsoft.VSTS.Scheduling.StoryPoints",
+        "options": [
+          {
+            "value": "evidence:size",
+            "label": "Coherence size (S / M / L) — an AI-assigned estimate",
+            "detail": "Coherence's size is an AI-assigned estimate (S=3, M=5, L=8)."
+          },
+          {
+            "value": "skip",
+            "label": "Leave empty"
+          }
+        ],
+        "allowsText": true,
+        "blocking": false
+      }
+    ],
+    "issues": [
+      {
+        "severity": "info",
+        "code": "open-questions",
+        "useCaseId": "UC-001",
+        "message": "UC-001 still has 1 open question(s); they travel in the description.",
+        "id": "open-questions:UC-001:"
+      },
+      {
+        "severity": "info",
+        "code": "open-questions",
+        "useCaseId": "UC-003",
+        "message": "UC-003 still has 1 open question(s); they travel in the description.",
+        "id": "open-questions:UC-003:"
+      }
+    ],
+    "ai": {
+      "requested": false,
+      "outcome": "not-requested",
+      "questions": 0,
+      "accepted": 0,
+      "rejected": 0
+    },
+    "readiness": "ready",
+    "summary": {
+      "items": 3,
+      "groups": 1,
+      "requirements": 2,
+      "creates": 3,
+      "updates": 0,
+      "relationships": 3,
+      "blocking": 0,
+      "warnings": 0,
+      "openDecisions": 1,
+      "inferences": 0
+    }
+  },
+  "previewOfUC003": {
+    "itemId": "uc:UC-003",
+    "system": "azdo",
+    "operation": "create",
+    "format": "html",
+    "request": "POST /_apis/wit/workitems/$User Story",
+    "body": [
+      {
+        "op": "add",
+        "path": "/fields/System.Title",
+        "value": "[UC-003] Sign in with email and password"
+      },
+      {
+        "op": "add",
+        "path": "/fields/System.Description",
+        "value": "<p><strong>As a</strong> registered user<br><strong>I want to</strong> sign in with my email address and password<br><strong>So that</strong> I can access my account securely</p>\n<p><strong>Scope:</strong> Sign-in form on the Login screen: credentials entry, remember-me and submission.</p>\n<p><strong>Feature:</strong> Authentication · <strong>Persona:</strong> Registered user · <strong>Screens:</strong> Login · <strong>Size:</strong> M · <strong>Depends on:</strong> UC-001</p>\n<h2>Preconditions</h2>\n<ul>\n<li>The Login screen is displayed</li>\n</ul>\n<h2>Postconditions</h2>\n<ul>\n<li>The user is signed in</li>\n<li>The Dashboard screen is displayed</li>\n</ul>\n<h2>Business rules</h2>\n<h3>BR-01 · Email address — Email input</h3>\n<p><code>login.email</code></p>\n<p>Single-line email input labelled &quot;Email address&quot; with placeholder &quot;<a href=\"mailto:you@company.com\">you@company.com</a>&quot;.</p>\n<ul>\n<li>Mandatory; the form cannot be submitted while it is empty.</li>\n<li>Must be a valid email address, max 254 characters.</li>\n</ul>\n<h3>BR-05 · Screen-level rules — General</h3>\n<p>Rules that apply to the whole sign-in form.</p>\n<ul>\n<li>After 5 consecutive failed attempts the account is locked for 15 minutes.</li>\n</ul>\n<h2>Assumptions</h2>\n<ul>\n<li>Error message wording is inferred; confirm with UX.</li>\n</ul>\n<h2>Open questions</h2>\n<ul>\n<li>Is single sign-on required?</li>\n</ul>\n<hr>\n<p><em>Generated by Coherence — UC-003 rev 2 · coh-9cf20c6123b6</em></p>"
+      },
+      {
+        "op": "add",
+        "path": "/fields/Microsoft.VSTS.Common.AcceptanceCriteria",
+        "value": "<h4>SC-01 · Successful sign-in (happy path)</h4>\n<p><strong>GIVEN</strong> the Login screen is displayed<br>\n<strong>AND</strong> the user has an active account<br>\n<strong>WHEN</strong> the user enters a registered email address in &quot;Email address&quot;<br>\n<strong>AND</strong> the user selects &quot;Sign in&quot;<br>\n<strong>THEN</strong> the user is signed in<br>\n<strong>THEN</strong> the Dashboard screen is displayed</p>"
+      },
+      {
+        "op": "add",
+        "path": "/fields/System.Tags",
+        "value": "coherence-test; Coherence; UC-003"
+      },
+      {
+        "op": "add",
+        "path": "/fields/System.AreaPath",
+        "value": "Portal\\Web"
+      },
+      {
+        "op": "add",
+        "path": "/relations/-",
+        "value": {
+          "rel": "System.LinkTypes.Hierarchy-Reverse",
+          "url": "https://dev.azure.com/acme/_apis/wit/workItems/{{group:FEAT-01}}",
+          "attributes": {
+            "comment": "Feature group (Coherence)"
+          }
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "description": "Then: link to {{uc:UC-001}} (System.LinkTypes.Dependency-Reverse) · PATCH /_apis/wit/workitems/{{uc%3AUC-003}}",
+        "body": [
+          {
+            "op": "add",
+            "path": "/relations/-",
+            "value": {
+              "rel": "System.LinkTypes.Dependency-Reverse",
+              "url": "https://dev.azure.com/acme/_apis/wit/workItems/{{uc:UC-001}}",
+              "attributes": {
+                "comment": "UC-003 depends on UC-001 (Coherence)"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "notes": []
+  }
+}

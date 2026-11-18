@@ -1,0 +1,145 @@
+{
+  "name": "Coherence",
+  "artwork": "Scanline 1B",
+  "sourcePackage": "coherence-scanline-final.zip",
+  "sourceSha256": "595e7ed857cc14ca8d640574a767508751d44f539bc519b95ded41156cceebc8",
+  "identicalDuplicatePackage": "coherence-scanline-final (1).zip",
+  "suppliedDarkSvgMatchesFinal": true,
+  "recoveredPackage": "Coherence_Scanline_1B_Recovered_Logo_Pack.zip",
+  "recoveredSha256": "a45bd9102cfd88c2463fb470e186be08e81a1ad3f9d62fb5af33ed649c13a9b9",
+  "decision": "Previously approved final package preferred. Recovered concept differs in frame geometry, scanline thickness and small-size optimisation. Final masters, colours, proportions and C2PA metadata are unchanged.",
+  "files": [
+    {
+      "sourceEntry": "icons/final/png/scanline-dark-16.png",
+      "file": "brand/png/scanline-dark-16.png",
+      "sha256": "28b60ba2b8fdc22e196a58d3819eb945a1d51debcd83322f5085f93914f2734e",
+      "bytes": 446
+    },
+    {
+      "sourceEntry": "icons/final/png/scanline-dark-24.png",
+      "file": "brand/png/scanline-dark-24.png",
+      "sha256": "31ffb7bfda2db81e2706eecd07b3c3150b0aefb8dc3538f6321966ee9dba189b",
+      "bytes": 857
+    },
+    {
+      "sourceEntry": "icons/final/png/scanline-dark-256.png",
+      "file": "brand/png/scanline-dark-256.png",
+      "sha256": "439252393eecbdee31ee594ce5e9db4b18bbb8fe3f8dc7a6b73f7cb082cec29f",
+      "bytes": 21082
+    },
+    {
+      "sourceEntry": "icons/final/png/scanline-dark-32.png",
+      "file": "brand/png/scanline-dark-32.png",
+      "sha256": "bfe17a26bf49d399c869f0b50ab30e93fd2e388e474d2c9778b1c31269e28c80",
+      "bytes": 1109
+    },
+    {
+      "sourceEntry": "icons/final/png/scanline-dark-48.png",
+      "file": "brand/png/scanline-dark-48.png",
+      "sha256": "5624b67ff177a276a815514dbf224a48aebcec1743a2db100731d9adbdb7464b",
+      "bytes": 1761
+    },
+    {
+      "sourceEntry": "icons/final/png/scanline-light-16.png",
+      "file": "brand/png/scanline-light-16.png",
+      "sha256": "b21feaaac0bdc1c6bada22b6f193e60f80f61775a7cd5f538024fe48aa99abf4",
+      "bytes": 449
+    },
+    {
+      "sourceEntry": "icons/final/png/scanline-light-24.png",
+      "file": "brand/png/scanline-light-24.png",
+      "sha256": "fdb5fbd41e4d6074ec4241890ca101e577f0871ad1d6471bf6e855fcf64c2bb3",
+      "bytes": 840
+    },
+    {
+      "sourceEntry": "icons/final/png/scanline-light-256.png",
+      "file": "brand/png/scanline-light-256.png",
+      "sha256": "17d4067f1c3f2d1ed4b0eb69333bc19d6dc0cd2f63424748f09895f41165cf8e",
+      "bytes": 21515
+    },
+    {
+      "sourceEntry": "icons/final/png/scanline-light-32.png",
+      "file": "brand/png/scanline-light-32.png",
+      "sha256": "45f210ef2919672f19e16321d347403d03d84ac86ee20f72e5f3704cf967c055",
+      "bytes": 1198
+    },
+    {
+      "sourceEntry": "icons/final/png/scanline-light-48.png",
+      "file": "brand/png/scanline-light-48.png",
+      "sha256": "51518ff9d6afcaecad388a30f7158fcfea1a648e117df1680fd1bcfa6edbca47",
+      "bytes": 1963
+    },
+    {
+      "sourceEntry": "icons/final/scanline-dark-16.svg",
+      "file": "brand/scanline-dark-16.svg",
+      "sha256": "e3821920dca5f747465727575747e83119ce84b80e033a80fe486db4753103ab",
+      "bytes": 8663
+    },
+    {
+      "sourceEntry": "icons/final/scanline-dark-24.svg",
+      "file": "brand/scanline-dark-24.svg",
+      "sha256": "ace382e49a6102f2e2fe05f1953fe73bc9c8ea6baf45097706fed81c4ecff484",
+      "bytes": 8748
+    },
+    {
+      "sourceEntry": "icons/final/scanline-dark-32.svg",
+      "file": "brand/scanline-dark-32.svg",
+      "sha256": "b23b0be2eca30d98f2f87f9a3795078a974a4623720df3d360d0b39260cfe590",
+      "bytes": 8794
+    },
+    {
+      "sourceEntry": "icons/final/scanline-dark-48.svg",
+      "file": "brand/scanline-dark-48.svg",
+      "sha256": "ae85cdd163321f3e427d7a1f94fe7eba6b8862bcf18ac2ff23bbef3ccb9295c6",
+      "bytes": 8763
+    },
+    {
+      "sourceEntry": "icons/final/scanline-dark.svg",
+      "file": "brand/scanline-dark.svg",
+      "sha256": "332ce65ff427a55a80a2975d04157b73e0a97bd159720fedf2ea950971d457dd",
+      "bytes": 9068
+    },
+    {
+      "sourceEntry": "icons/final/scanline-light-16.svg",
+      "file": "brand/scanline-light-16.svg",
+      "sha256": "eebf6dbeec12712128c95165bb09c50f647ec910233ed3fbcad464422d28cc2f",
+      "bytes": 8662
+    },
+    {
+      "sourceEntry": "icons/final/scanline-light-24.svg",
+      "file": "brand/scanline-light-24.svg",
+      "sha256": "6003e724775fb2192a44c15b61ae952e927d660a3a2355e5b45c4df6e899517c",
+      "bytes": 8747
+    },
+    {
+      "sourceEntry": "icons/final/scanline-light-32.svg",
+      "file": "brand/scanline-light-32.svg",
+      "sha256": "0005afcc01637862da1b647517a3ac07ca20ef1043c690dfff1856a9fe20d89a",
+      "bytes": 8793
+    },
+    {
+      "sourceEntry": "icons/final/scanline-light-48.svg",
+      "file": "brand/scanline-light-48.svg",
+      "sha256": "c3f2a0d0db5afcf4cc368b79875717aeb410d944e59b49032bee52868b798d2b",
+      "bytes": 8762
+    },
+    {
+      "sourceEntry": "icons/final/scanline-light.svg",
+      "file": "brand/scanline-light.svg",
+      "sha256": "873d6ba93df45570890d7f49371c59c22f282891f9886b277d7058fbe2b278e2",
+      "bytes": 9067
+    },
+    {
+      "sourceEntry": "icons/final/screenscribe-dark.ico",
+      "file": "brand/scanline-dark.ico",
+      "sha256": "7505ba802986cbe0be40a77cc87e287d254d65fabd58847e6f75a58783af7036",
+      "bytes": 38640
+    },
+    {
+      "sourceEntry": "icons/final/screenscribe-light.ico",
+      "file": "brand/scanline-light.ico",
+      "sha256": "59c4729980654f19a97ef9df74bc36099aee6b78679b300270692cdc23e1ffb8",
+      "bytes": 39073
+    }
+  ]
+}

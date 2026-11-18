@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Coherence.exe, the Windows launcher (installer report §3.3, §3.7). .NET Framework 4.8 is part of Windows 10/11,
+       so nothing is shipped or serviced besides this executable. Build with packaging/build-launcher.mjs. -->
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>Coherence</AssemblyName>
+    <RootNamespace>Coherence.Launcher</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Coherence.ico</ApplicationIcon>
+    <Deterministic>true</Deterministic>
+    <PathMap>$(MSBuildProjectDirectory)=launcher</PathMap>
+    <DebugType>none</DebugType>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <Product>Coherence</Product>
+    <Company>Deon Fouche</Company>
+    <Copyright>Copyright (c) Deon Fouche. MIT licence.</Copyright>
+    <!-- Set by packaging/build-launcher.mjs from package.json; the backend must report the same version. -->
+    <Version Condition="'$(Version)' == ''">0.0.0</Version>
+    <!-- "test" builds honour the profile, browser-command and unattended switches; release builds do not contain them. -->
+    <CoherenceBuildKind Condition="'$(CoherenceBuildKind)' == ''">release</CoherenceBuildKind>
+    <DefineConstants Condition="'$(CoherenceBuildKind)' == 'test'">$(DefineConstants);COHERENCE_TEST_BUILD</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyMetadata Include="CoherenceBuildKind" Value="$(CoherenceBuildKind)" />
+    <AssemblyMetadata Include="CoherenceVersion" Value="$(Version)" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <!-- The app window. Users need nothing extra: the WebView2 runtime is part of Windows 11. -->
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4314.35" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="tests/**" />
+  </ItemGroup>
+</Project>

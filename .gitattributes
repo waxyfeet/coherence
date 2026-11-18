@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.png binary
+*.woff2 binary
+# Preserve upstream notice formatting and verbatim build-log output.
+public/THIRD_PARTY_NOTICES.txt -whitespace

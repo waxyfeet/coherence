@@ -1,0 +1,10 @@
+{
+  "comment": "The .NET SDK that builds the launcher (packaging/build-launcher.mjs). Build-time only: Coherence.exe targets .NET Framework 4.8, which Windows provides. Download the zip from url, check its SHA-512 against sha512 (Microsoft's release metadata), and extract it to build/cache/dotnet-sdk-<sdk>/.",
+  "sdk": "10.0.403",
+  "runtime": "10.0.14",
+  "released": "2026-10-25",
+  "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.403/dotnet-sdk-10.0.403-win-x64.zip",
+  "bytes": 300745255,
+  "sha512": "7a114c318fa7f1d9822991b534b2814d0e78386ceda816b371f5141acefe741d87ccb606ede06cadac8f9ac5070e32b708a67bbd1619ff5e5a7858a27874ef48",
+  "metadata": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/10.0/releases.json"
+}

@@ -1,0 +1,30 @@
+.project-files-panel {
+  display: grid;
+  gap: 20px;
+}
+.project-files-panel .path-display,
+.project-files-panel code {
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+.project-files-panel .field {
+  min-width: 0;
+}
+.found-projects {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.found-projects li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.found-projects li > div {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
